@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DAY &amp; NIGHT BUILDER</title>
+<meta name="description" content="Crie seu alternador de temas, visualize em tempo real e baixe os arquivos prontos para o seu site.">
+<meta name="color-scheme" content="dark">
+<link rel="icon" type="image/svg+xml" href="https://eliseuangelos.github.io/assets/icons/favicon.svg">
+<link rel="apple-touch-icon" href="https://eliseuangelos.github.io/assets/icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="construtor.css">
+</head>
+<body>
+<header class="top">
+  <a class="back" href="../">← Voltar ao DAY &amp; NIGHT EXPERIENCE</a>
+  <a class="brand mono" href="https://eliseuangelos.github.io/" aria-label="eliseu.angelos">eliseu.angelos</a>
+</header>
+<main class="bwrap">
+  <header class="bhero">
+    <h1>DAY &amp; NIGHT BUILDER</h1>
+    <p>Personalize o botão, escolha os efeitos e baixe os arquivos prontos para o seu site. Tudo é gerado no seu navegador, sem enviar nada a servidores.</p>
+  </header>
+
+  <div class="layout">
+    <div class="steps" id="form">
+      <section class="step">
+        <h2>Escolha a modalidade</h2>
+        <div class="modes" role="radiogroup" aria-label="Modalidade">
+          <label class="opt"><input type="radio" name="mode" value="button"><span><strong>Somente botões</strong><small>Alternador moderno de modo claro e escuro, leve, sem o efeito da Terra.</small></span></label>
+          <label class="opt"><input type="radio" name="mode" value="cinematic"><span><strong>Experiência completa</strong><small>Alternador com a animação cinematográfica da Terra: rotação, nuvens e velocidade configuráveis.</small></span></label>
+        </div>
+      </section>
+      <section class="step needs" id="st-botao"><h2>Personalize o botão</h2><div class="grid" id="g-botao"></div></section>
+      <section class="step needs" id="st-efeitos" hidden><h2>Configure os efeitos</h2><div class="grid" id="g-efeitos"></div></section>
+      <section class="step needs" id="st-temas"><h2>Temas e preferência</h2><div class="grid" id="g-temas"></div></section>
+    </div>
+
+    <aside class="side needs" aria-label="Pré-visualização e downloads">
+      <section class="step">
+        <h2>Visualize o resultado</h2>
+        <div class="pv" id="pv">
+          <div class="pv-bar"><span class="mono">seu-site.com</span><span id="pv-slot"></span></div>
+          <div class="pv-body"><h3>Seu site</h3><p>Este conteúdo muda junto com o tema escolhido.</p><div class="pv-card">Cartão de exemplo</div></div>
+        </div>
+        <div class="row">
+          <button class="btn" id="pv-toggle" type="button">Alternar</button>
+          <button class="btn ghost" id="pv-dn" type="button">Testar dia → noite</button>
+          <button class="btn ghost" id="pv-nd" type="button">Testar noite → dia</button>
+        </div>
+        <p class="small mono" id="pv-info"></p>
+      </section>
+      <section class="step">
+        <h2>Gere e baixe</h2>
+        <button class="btn" id="dl-zip" type="button">Baixar ZIP · day-night-personalizado</button>
+        <ul class="files" id="dl-list"></ul>
+        <p id="status" role="status" aria-live="polite"></p>
+      </section>
+    </aside>
+  </div>
+
+  <section class="step needs" id="st-doc"><h2>Instruções de instalação</h2><ol class="guide" id="guide"></ol></section>
+</main>
+<footer class="foot">
+  <p>Desenvolvimento: <strong>Eliseu Fernandes Laurindo</strong> · Site pessoal e profissional: <a href="https://eliseuangelos.github.io/">eliseuangelos.github.io</a></p>
+  <a class="mono" href="../">DAY &amp; NIGHT EXPERIENCE</a>
+</footer>
+<script src="../tools/generator.js"></script>
+<script src="../tools/zip.js"></script>
+<script src="construtor.js"></script>
+</body>
+</html>

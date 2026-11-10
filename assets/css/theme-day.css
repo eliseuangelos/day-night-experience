@@ -1,0 +1,7 @@
+/* DIA (Light Mode): ativo com <html data-theme="light">. Só variáveis, nenhum layout. */
+:root,:root[data-theme="light"]{
+  color-scheme:light;
+  --color-background:#f4f7fb;--color-surface:#fff;--color-surface-2:#e9eff5;
+  --color-text:#162638;--color-text-muted:#526579;--color-border:#d5dee8;
+  --color-primary:#2563eb;--color-on-primary:#fff;
+}

@@ -1,0 +1,3 @@
+.dn-stage{position:fixed;inset:0;z-index:2147483000;touch-action:none}
+.dn-stage canvas{display:block;width:100%;height:100%}
+.dn-stage.dn-scoped{position:absolute;z-index:5}

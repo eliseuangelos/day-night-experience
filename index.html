@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DAY &amp; NIGHT EXPERIENCE</title>
+<meta name="description" content="Botão de alternância de tema com transição cinematográfica da rotação da Terra. Componente reutilizável em HTML, CSS e JavaScript.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" type="image/svg+xml" href="https://eliseuangelos.github.io/assets/icons/favicon.svg">
+<link rel="apple-touch-icon" href="https://eliseuangelos.github.io/assets/icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap">
+<script src="assets/js/theme-init.js"></script>
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="component/day-night.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand mono" href="https://eliseuangelos.github.io/" aria-label="eliseu.angelos">
+    <img src="https://eliseuangelos.github.io/assets/icons/brand-symbol.svg" alt="" width="28" height="28" onerror="this.style.display='none'">eliseu.angelos
+  </a>
+  <a class="cta" href="construtor/">CRIAR MEU ALTERNADOR</a>
+</header>
+<main class="wrap">
+  <header class="hero">
+    <h1>DAY &amp; NIGHT EXPERIENCE</h1>
+    <p>Um clique e a Terra gira: a luz atravessa o planeta e a página amanhece ou anoitece diante de você.</p>
+    <div id="hero-btn" class="hero-btn"></div>
+    <p class="chip" id="state" role="status">Modo claro</p>
+  </header>
+
+  <section aria-labelledby="h-demo">
+    <h2 id="h-demo">Interface de exemplo</h2>
+    <div class="cards">
+      <article class="card"><h3>Superfície padrão</h3><p>Cartões, bordas e textos trocam de paleta junto com a animação.</p></article>
+      <article class="card alt"><h3>Superfície secundária</h3><p>Camadas com contraste próprio em cada tema.</p><button class="btn" type="button">Ação principal</button></article>
+      <article class="card"><h3>Formulário</h3><label>Seu nome<input type="text" placeholder="Digite aqui"></label></article>
+    </div>
+  </section>
+
+  <div class="duo">
+    <section class="panel" aria-labelledby="h-ctl">
+      <h2 id="h-ctl">Controles de teste</h2>
+      <div class="row">
+        <button class="btn" id="c-toggle" type="button">Alternar tema</button>
+        <button class="btn ghost" id="c-dn" type="button">Testar dia → noite</button>
+        <button class="btn ghost" id="c-nd" type="button">Testar noite → dia</button>
+      </div>
+      <label class="row"><input type="checkbox" id="c-anim" checked> Animação ativada</label>
+      <fieldset class="row"><legend>Velocidade</legend>
+        <label><input type="radio" name="speed" value="slow"> Lenta</label>
+        <label><input type="radio" name="speed" value="normal" checked> Normal</label>
+        <label><input type="radio" name="speed" value="fast"> Rápida</label>
+      </fieldset>
+      <div class="row"><button class="btn ghost" id="c-clear" type="button">Limpar preferência salva</button></div>
+    </section>
+    <section class="panel" aria-labelledby="h-inf">
+      <h2 id="h-inf">Informações</h2>
+      <dl>
+        <dt>Estado atual</dt><dd id="i-state"></dd>
+        <dt>Atributo</dt><dd><code id="i-attr"></code></dd>
+        <dt>Preferência salva</dt><dd><span id="i-saved"></span> <code>dn-theme</code></dd>
+        <dt>Animação</dt><dd>Terra em 3D com terminador, nuvens, luzes de cidades e revelação circular do novo tema.</dd>
+        <dt>Dispositivo</dt><dd><code id="i-dev"></code></dd>
+      </dl>
+    </section>
+  </div>
+
+  <section class="promo" aria-labelledby="h-promo">
+    <h2 id="h-promo">Crie seu próprio alternador de temas.</h2>
+    <p>Personalize o botão, escolha os efeitos visuais e gere gratuitamente os arquivos necessários para integrar o DAY &amp; NIGHT EXPERIENCE ao seu próprio site.</p>
+    <a class="cta" href="construtor/">CRIAR MEU ALTERNADOR</a>
+  </section>
+
+  <section aria-labelledby="h-use">
+    <h2 id="h-use">Use em seu site</h2>
+    <pre><code>&lt;link rel="stylesheet" href="component/day-night.css"&gt;
+&lt;script src="component/day-night.js"&gt;&lt;/script&gt;
+&lt;script&gt;DayNight.init({ position: 'top-right' });&lt;/script&gt;</code></pre>
+    <p class="note">Instruções: <code>docs/COMO-USAR.md</code>. Prefere uma versão sob medida? Use o <a href="construtor/">construtor</a>.</p>
+  </section>
+</main>
+<footer class="foot">
+  <p>Desenvolvimento: <strong>Eliseu Fernandes Laurindo</strong> · Site pessoal e profissional: <a href="https://eliseuangelos.github.io/">eliseuangelos.github.io</a></p>
+  <a class="mono" href="https://eliseuangelos.github.io/">eliseu.angelos</a>
+</footer>
+<script src="component/day-night.js"></script>
+<script src="assets/js/demo.js"></script>
+</body>
+</html>

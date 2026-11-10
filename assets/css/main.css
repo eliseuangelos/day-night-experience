@@ -1,0 +1,4 @@
+/* Ponto de entrada: tokens do dia, tokens da noite e base (nesta ordem). */
+@import url("theme-day.css");
+@import url("theme-night.css");
+@import url("base.css");

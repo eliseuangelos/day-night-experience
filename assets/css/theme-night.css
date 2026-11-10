@@ -1,0 +1,7 @@
+/* NOITE (Dark Mode): ativo com <html data-theme="dark">. Mesmos nomes de variáveis do dia. */
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --color-background:#111c28;--color-surface:#1b2a3a;--color-surface-2:#24364a;
+  --color-text:#edf3f8;--color-text-muted:#b7c5d3;--color-border:#3a4d60;
+  --color-primary:#83b4ff;--color-on-primary:#0d1b2a;
+}

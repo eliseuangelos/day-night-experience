@@ -127,7 +127,17 @@
     url = URL.createObjectURL(new Blob([OUT.files['day-night.js']], { type: 'text/javascript' })); nodes = [st, sc];
     sc.onload = function () {
       if (my !== seq) return;
-      inst = window.DayNight.init({ root: $('#pv'), target: OUT.config.button.position === 'inline' ? $('#pv-slot') : null, storageKey: KEY, theme: theme });
+      var inheritedTheme =
+    theme ||
+    document.documentElement.getAttribute('data-theme') ||
+    'light';
+
+inst = window.DayNight.init({
+    root: $('#pv'),
+    target: OUT.config.button.position === 'inline' ? $('#pv-slot') : null,
+    storageKey: KEY,
+    theme: inheritedTheme
+});
       info();
     };
     sc.src = url; document.head.appendChild(sc);

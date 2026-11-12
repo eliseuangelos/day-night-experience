@@ -137,7 +137,16 @@ Hoje aplico essa curiosidade em projetos próprios, com foco em aprendizagem, ex
 
 ## Licença
 
-Na verificação deste repositório, não foi identificado um arquivo `LICENSE`. A publicação pública do código no GitHub não deve ser interpretada, por si só, como uma licença de uso, modificação ou redistribuição. Consulte o autor antes de reutilizar o código e considere adicionar uma licença explícita caso queira definir permissões de uso.
+Este projeto está disponibilizado sob a licença **MIT**.
+
+Copyright © 2026 Eliseu Fernandes Laurindo.
+
+É permitida a utilização, cópia, modificação, adaptação,
+distribuição e comercialização deste software, respeitando
+as condições estabelecidas na licença.
+
+Consulte o arquivo [LICENSE](LICENSE) para conhecer
+os termos completos.
 
 ---
 

@@ -1,314 +1,144 @@
 # DAY & NIGHT EXPERIENCE
 
-Um clique e a Terra gira: a luz atravessa o planeta e a página amanhece ou anoitece diante de você.
-
-O **DAY & NIGHT EXPERIENCE** é um projeto pessoal que apresenta uma forma visual de alternar entre temas claro e escuro. A experiência combina um botão de alternância com uma animação cinematográfica da Terra e inclui o **DAY & NIGHT BUILDER**, uma ferramenta para personalizar e gerar versões do componente para utilização em outros sites.
-
 <p align="center">
-  <a href="https://eliseuangelos.github.io/day-night-experience/">Ver demonstração</a> ·
-  <a href="https://eliseuangelos.github.io/day-night-experience/construtor/">Abrir construtor</a> ·
-  <a href="https://github.com/eliseuangelos/day-night-experience">Repositório no GitHub</a>
+  <a href="https://eliseuangelos.github.io/day-night-experience/" target="_blank">
+    <img src="https://img.shields.io/badge/VER_DEMONSTRAÇÃO-00D9FF?style=for-the-badge&logo=googlechrome&logoColor=050505" alt="Ver Demonstração">
+  </a>
+  <a href="https://eliseuangelos.github.io/day-night-experience/construtor/" target="_blank">
+    <img src="https://img.shields.io/badge/ABRIR_CONSTRUTOR-7952B3?style=for-the-badge&logo=codepen&logoColor=white" alt="Abrir Construtor">
+  </a>
+  <a href="https://eliseuangelos.github.io/" target="_blank">
+    <img src="https://img.shields.io/badge/SITE_PESSOAL-111827?style=for-the-badge&logo=googlechrome&logoColor=00D9FF" alt="Site Pessoal">
+  </a>
+  <a href="https://github.com/eliseuangelos" target="_blank">
+    <img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  </a>
+  <a href="https://linkedin.com/in/eliseu-fernandes-laurindo" target="_blank">
+    <img src="https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
 </p>
+
+<p align="center"><strong>Uma transição entre claro e escuro em que a luz atravessa uma representação animada da Terra.</strong></p>
 
 ---
 
-## Visão geral
+## Sobre o projeto
 
-O projeto possui duas áreas principais:
+O **DAY & NIGHT EXPERIENCE** é um projeto pessoal de estudo e experimentação que explora uma forma visual de alternar entre temas claro e escuro em páginas web. A demonstração combina um controle de alternância com uma animação cinematográfica da Terra, evidenciando a mudança de iluminação e a adaptação dos elementos da interface.
+
+O repositório também inclui o **DAY & NIGHT BUILDER**, um construtor que permite personalizar a aparência e o comportamento do alternador, visualizar o resultado e gerar os arquivos necessários para integrá-lo a outros sites.
+
+**Demonstração:** [eliseuangelos.github.io/day-night-experience](https://eliseuangelos.github.io/day-night-experience/)  
+**Construtor:** [DAY & NIGHT BUILDER](https://eliseuangelos.github.io/day-night-experience/construtor/)
+
+## Objetivos do projeto
+
+- Explorar e demonstrar uma experiência diferenciada de alternância entre temas claro e escuro.
+- Oferecer um componente que possa ser configurado e reutilizado em outros projetos web.
+- Permitir que pessoas sem necessidade de editar o código-fonte personalizem o controle visual.
+- Gerar arquivos independentes para integração em páginas estáticas ou projetos existentes.
+- Experimentar animações, organização de interfaces, preferências de usuário e recursos nativos da web.
+
+## Áreas da aplicação
 
 ### 1. DAY & NIGHT EXPERIENCE — Demonstração
 
-A página inicial apresenta o alternador de temas em funcionamento. Ao alternar entre dia e noite, uma representação animada da Terra revela a mudança de iluminação e o novo tema da interface.
-
-A demonstração também oferece controles para testar a alternância, experimentar as velocidades e observar como diferentes elementos da página se adaptam aos temas.
-
-**A página inicial original permanece como a porta de entrada do projeto.**
-
-[Acessar a demonstração](https://eliseuangelos.github.io/day-night-experience/)
+A página inicial apresenta o alternador em funcionamento e uma interface de exemplo com superfícies, cartões, botões e formulário. Os controles permitem testar a passagem de dia para noite e de noite para dia, ativar ou desativar a animação, experimentar velocidades e limpar a preferência salva.
 
 ### 2. DAY & NIGHT BUILDER — Construtor
 
-O construtor permite criar uma versão personalizada do alternador, visualizar as alterações e baixar os arquivos para integrar o componente a outro site.
+O construtor oferece duas modalidades:
 
-O visitante pode escolher entre duas modalidades:
+- **Somente botões:** alternador leve de tema claro/escuro, sem o palco animado da Terra.
+- **Experiência completa:** alternador com a animação cinematográfica, com opções para configurar rotação, nuvens e velocidade da transição.
 
-- **Somente botões:** alternador de tema claro/escuro sem o efeito visual da Terra. É a opção mais leve para quem deseja apenas os controles de alternância.
-- **Experiência completa:** alternador com a animação cinematográfica da Terra, com opções para ativar ou desativar a rotação e as nuvens, além de escolher a velocidade da transição.
-
-O construtor também permite personalizar características do botão, como formato, ícones, tamanho, posição, espaçamento, transições e cores.
-
-[Acessar o DAY & NIGHT BUILDER](https://eliseuangelos.github.io/day-night-experience/construtor/)
-
----
+Também é possível personalizar características do controle, como formato, ícones, dimensões, posição, espaçamento, cores e transições. O resultado pode ser visualizado antes da exportação.
 
 ## Funcionalidades
 
-- Alternância entre modo claro e modo escuro.
-- Efeito visual cinematográfico com representação animada da Terra em Canvas 2D.
-- Animação de rotação configurável.
-- Exibição de nuvens configurável.
-- Três velocidades de transição: lenta, normal e rápida.
-- Modalidade independente, somente com botões, sem o motor gráfico da Terra.
-- Personalização da aparência e do posicionamento do botão.
+- Alternância entre tema claro e tema escuro.
+- Animação da Terra renderizada em Canvas 2D na modalidade completa.
+- Opções de rotação e exibição de nuvens.
+- Três velocidades predefinidas de transição: lenta, normal e rápida.
+- Modalidade independente com somente os botões de alternância.
+- Personalização visual e de posicionamento do controle.
 - Pré-visualização das configurações no construtor.
-- Geração de arquivos personalizados diretamente no navegador.
-- Download do pacote completo em ZIP ou dos arquivos individualmente.
-- Persistência da preferência de tema com `localStorage`.
-- Opção para respeitar a preferência de tema do sistema operacional.
-- Suporte a `prefers-reduced-motion`.
+- Geração dos arquivos diretamente no navegador do visitante.
+- Download do pacote completo em ZIP ou de arquivos individuais.
+- Persistência da preferência de tema por `localStorage`.
+- Opção para respeitar a preferência de aparência do sistema operacional.
+- Suporte à preferência de movimento reduzido (`prefers-reduced-motion`).
 - API JavaScript para integração em outras páginas.
-- Sem necessidade de backend ou banco de dados.
-
-### Velocidades disponíveis
-
-| Opção | Duração de referência |
-|---|---:|
-| Lenta | 4.200 ms |
-| Normal | 2.800 ms |
-| Rápida | 1.600 ms |
-
----
+- Funcionamento sem backend ou banco de dados próprio.
 
 ## Arquivos gerados pelo construtor
 
-Ao personalizar o componente, o construtor prepara um pacote chamado `day-night-personalizado.zip`, que contém:
+O pacote personalizado reúne os arquivos principais para integração:
 
 | Arquivo | Finalidade |
 |---|---|
-| `day-night.js` | Lógica JavaScript do componente personalizado. |
-| `day-night.css` | Estilos necessários para a apresentação do componente. |
-| `integracao.html` | Exemplo de integração em uma página HTML. |
-| `instrucoes.txt` | Manual de instalação e configuração em português. |
-| `README.md` | Resumo técnico da versão personalizada. |
+| `day-night.js` | Lógica JavaScript do alternador personalizado. |
+| `day-night.css` | Estilos necessários ao componente. |
+| `integracao.html` | Exemplo de inclusão em uma página HTML. |
+| `instrucoes.txt` | Orientações de instalação e configuração. |
+| `README.md` | Resumo técnico da versão gerada. |
 
-Os arquivos também podem ser baixados separadamente. Na modalidade **Somente botões**, o gerador exclui o motor gráfico da Terra e os estilos específicos do palco cinematográfico. Na experiência completa, o pacote considera as opções selecionadas para rotação, nuvens e velocidade.
+Os arquivos também podem ser baixados separadamente. Na modalidade somente botões, o pacote não inclui o motor gráfico e os estilos específicos da experiência cinematográfica.
 
-A geração acontece no navegador do visitante, sem enviar as configurações para um servidor do projeto.
+## Integração básica
 
----
+A inclusão básica do componente em uma página HTML segue este padrão:
+
+```html
+<link rel="stylesheet" href="component/day-night.css">
+<script src="component/day-night.js"></script>
+<script>
+  DayNight.init({ position: 'top-right' });
+</script>
+```
+
+Para conhecer as opções disponíveis, consulte o [manual de utilização](https://github.com/eliseuangelos/day-night-experience/blob/main/docs/COMO-USAR.md) e os exemplos do repositório.
 
 ## Tecnologias utilizadas
 
-O projeto foi construído com tecnologias nativas da web:
+| Tecnologia ou recurso | Aplicação |
+|---|---|
+| HTML5 | Estrutura da demonstração, do construtor e dos exemplos. |
+| CSS3 | Temas, variáveis, responsividade, transições e apresentação visual. |
+| JavaScript | Alternância, configurações, geração e integração do componente. |
+| Canvas 2D | Renderização da representação animada da Terra. |
+| SVG | Ícones e elementos vetoriais. |
+| localStorage | Persistência da preferência de tema. |
+| GitHub Pages | Publicação estática da demonstração e do construtor. |
 
-- **HTML5** — estrutura das páginas e dos componentes.
-- **CSS3** — identidade visual, temas, variáveis CSS, responsividade e transições.
-- **JavaScript** — lógica de alternância, configurações, construtor e geração dos arquivos.
-- **Canvas 2D** — renderização da representação animada da Terra na experiência completa.
-- **SVG** — ícones e elementos vetoriais.
-- **localStorage** — armazenamento local da preferência de tema.
-- **GitHub Pages** — hospedagem estática da demonstração e do construtor.
-
-O componente não depende de frameworks JavaScript, backend ou banco de dados. O projeto pode ser publicado como um site estático.
-
----
-
-## Como utilizar o componente em outro site
-
-A maneira mais simples é utilizar os arquivos distribuídos no próprio repositório ou gerar uma versão personalizada pelo construtor.
-
-### Utilizando os arquivos publicados
-
-Adicione o CSS no `<head>` da página:
-
-```html
-<link
-  rel="stylesheet"
-  href="https://eliseuangelos.github.io/day-night-experience/component/day-night.css"
->
-```
-
-Antes do fechamento do `<body>`, adicione o JavaScript e inicialize o componente:
-
-```html
-<script src="https://eliseuangelos.github.io/day-night-experience/component/day-night.js"></script>
-<script>
-  DayNight.init({
-    position: 'top-right'
-  });
-</script>
-```
-
-O componente aplica o tema por meio do atributo `data-theme` por padrão. A página hospedeira deve definir os estilos correspondentes aos temas claro e escuro, por exemplo, utilizando seletores como `:root[data-theme="light"]` e `:root[data-theme="dark"]`.
-
-> Para projetos em produção, avalie baixar e hospedar os arquivos no próprio site. Assim, você controla a versão utilizada e não depende da disponibilidade de um endereço externo.
-
-### Personalização da inicialização
-
-A API `DayNight.init()` aceita opções para controlar o funcionamento do componente. Entre as configurações disponíveis estão:
-
-- `mode`: modalidade do componente (`button` ou `cinematic`).
-- `speed`: velocidade (`slow`, `normal`, `fast` ou duração numérica em milissegundos).
-- `rotation`: ativa ou desativa a rotação do planeta, quando disponível.
-- `clouds`: ativa ou desativa as nuvens, quando disponíveis.
-- `button`: configurações do botão, como tamanho, posição e espaçamento.
-- `themes`: nomes utilizados para identificar os temas claro e escuro.
-- `attribute`: forma de aplicação do tema, como `data-theme` ou `class`.
-- `persistence`: controla o armazenamento da preferência.
-- `storageKey`: define a chave utilizada no `localStorage`.
-- `respectSystem`: permite considerar a preferência de tema do sistema operacional.
-
-Exemplo de configuração da experiência completa:
-
-```html
-<script>
-  DayNight.init({
-    mode: 'cinematic',
-    speed: 'normal',
-    rotation: true,
-    clouds: true,
-    button: {
-      size: 48,
-      position: 'top-right',
-      offset: 16
-    },
-    persistence: true,
-    respectSystem: true
-  });
-</script>
-```
-
-Consulte o manual para conhecer as opções e adaptar a integração à estrutura do seu site:
-
-[docs/COMO-USAR.md](docs/COMO-USAR.md)
-
----
-
-## Estrutura do repositório
-
-```text
-DAY-NIGHT-EXPERIENCE/
-│
-├── index.html                  # Página inicial e demonstração
-│
-├── construtor/                 # DAY & NIGHT BUILDER
-│   ├── index.html
-│   ├── construtor.css
-│   └── construtor.js
-│
-├── component/                  # Componente distribuível
-│   ├── src/                    # Módulos-fonte do componente
-│   │   ├── core.js
-│   │   ├── globe.js
-│   │   ├── clouds.js
-│   │   ├── core.css
-│   │   └── stage.css
-│   ├── day-night.js            # JavaScript distribuído
-│   └── day-night.css           # CSS distribuído
-│
-├── tools/                      # Geração, build, ZIP e testes
-│   ├── generator.js
-│   ├── zip.js
-│   ├── build.js
-│   └── test.js
-│
-├── assets/                     # Recursos visuais e estilos do site
-├── docs/                       # Documentação técnica e de instalação
-├── examples/                   # Exemplos de integração
-├── CHANGELOG.md                # Histórico de versões
-├── CONTRIBUTING.md             # Orientações de contribuição
-└── README.md
-```
-
----
-
-## Executar localmente
-
-Para visualizar e testar o projeto em seu computador, clone o repositório:
+## Execução local
 
 ```bash
 git clone https://github.com/eliseuangelos/day-night-experience.git
 cd day-night-experience
-```
-
-Inicie um servidor local simples com Python:
-
-```bash
 python3 -m http.server 8000
 ```
 
-Abra no navegador:
+Acesse `http://localhost:8000/` para a demonstração e `http://localhost:8000/construtor/` para o construtor. Como o construtor carrega módulos com `fetch`, utilize um servidor HTTP local em vez de abrir os arquivos diretamente pelo protocolo `file://`.
 
-- Página inicial: `http://localhost:8000/`
-- Construtor: `http://localhost:8000/construtor/`
+Para reconstruir os arquivos distribuíveis e executar os testes do projeto, consulte os scripts em `tools/` e a documentação técnica do repositório. A rotina de testes utiliza Node.js 18 ou superior e Python 3 para a validação do pacote ZIP.
 
-**Observação:** o construtor utiliza `fetch` para carregar os módulos-fonte do componente. Por isso, deve ser aberto por meio de um servidor local, e não diretamente pelo endereço `file://`.
+## Sobre o autor
 
----
+Sou **Eliseu Fernandes Laurindo**, profissional com experiência em atividades administrativas e operacionais e estudante autodidata de tecnologia. Estudo HTML e CSS desde aproximadamente 2010 e exploro fundamentos de JavaScript. Na adolescência, comecei a experimentar estruturas de jogos digitais; mais tarde, atuei como tutor de um MMORPG multiplataforma e internacional, mantive uma fanpage própria e desenvolvi scripts e calculadoras para auxiliar jogadores.
 
-## Gerar e testar os arquivos do componente
+Hoje aplico essa curiosidade em projetos próprios, com foco em aprendizagem, experimentação e utilidades práticas. **Não sou desenvolvedor profissional nem possuo formação acadêmica específica em desenvolvimento de software.** Sou estudante e entusiasta de tecnologia e inteligência artificial. Ferramentas de IA podem apoiar minhas pesquisas, o planejamento e a revisão do projeto, dentro de um processo contínuo de estudo e validação.
 
-O projeto possui scripts para reconstruir a distribuição e validar o gerador.
-
-Requisitos para executar os testes: Node.js 18 ou superior e Python 3 para a validação do pacote ZIP.
-
-Gerar os arquivos distribuíveis:
-
-```bash
-node tools/build.js
-```
-
-Executar os testes:
-
-```bash
-node tools/test.js
-```
-
-Os testes verificam, entre outros pontos, a geração das modalidades, a sintaxe JavaScript, a integridade do CSS, a alternância nos dois sentidos, a exclusão de recursos gráficos na modalidade somente botões e a estrutura dos pacotes gerados.
-
----
-
-## Publicação no GitHub Pages
-
-O projeto utiliza hospedagem estática e pode ser publicado pelo GitHub Pages.
-
-1. Acesse o repositório no GitHub.
-2. Entre em **Settings → Pages**.
-3. Em **Build and deployment**, selecione **Deploy from a branch**.
-4. Escolha a branch `main` e a pasta `/ (root)`.
-5. Salve as configurações e aguarde a publicação.
-
-A demonstração publicada está disponível em:
-
-https://eliseuangelos.github.io/day-night-experience/
-
-O construtor está disponível em:
-
-https://eliseuangelos.github.io/day-night-experience/construtor/
-
----
-
-## Documentação
-
-- [Como utilizar o componente](docs/COMO-USAR.md)
-- [Arquitetura do projeto](docs/arquitetura.md)
-- [Histórico de versões](CHANGELOG.md)
-- [Orientações para contribuições](CONTRIBUTING.md)
-
----
-
-## Sobre a criação
-
-O DAY & NIGHT EXPERIENCE é um projeto pessoal de estudo, curiosidade e experimentação.
-
-Não tenho formação acadêmica na área de desenvolvimento de software nem atuo profissionalmente como desenvolvedor. Sou apaixonado por tecnologia, gosto de estudar e aprender continuamente e tenho um interesse especial pelas possibilidades da inteligência artificial.
-
-Este projeto nasceu da vontade de transformar aprendizado e ideias em algo prático. Durante sua criação, utilizei ferramentas de inteligência artificial como apoio à pesquisa, ao planejamento, à aprendizagem e ao desenvolvimento. A experiência também representa uma oportunidade de explorar novas tecnologias, compreender melhor como funcionam e compartilhar o resultado desse processo.
-
-Acredito que estudar, experimentar e manter a curiosidade são formas importantes de continuar aprendendo.
-
----
+- **Demonstração:** [DAY & NIGHT EXPERIENCE](https://eliseuangelos.github.io/day-night-experience/)
+- **Construtor:** [DAY & NIGHT BUILDER](https://eliseuangelos.github.io/day-night-experience/construtor/)
+- **Site pessoal:** [eliseuangelos.github.io](https://eliseuangelos.github.io/)
+- **GitHub:** [github.com/eliseuangelos](https://github.com/eliseuangelos)
+- **LinkedIn:** [linkedin.com/in/eliseu-fernandes-laurindo](https://linkedin.com/in/eliseu-fernandes-laurindo)
 
 ## Licença
 
-No momento, o repositório não possui um arquivo `LICENSE`. Portanto, os termos de reutilização, modificação e redistribuição do código ainda não estão formalmente definidos. Consulte o autor antes de assumir permissões de uso que não estejam expressamente concedidas.
+Na verificação deste repositório, não foi identificado um arquivo `LICENSE`. A publicação pública do código no GitHub não deve ser interpretada, por si só, como uma licença de uso, modificação ou redistribuição. Consulte o autor antes de reutilizar o código e considere adicionar uma licença explícita caso queira definir permissões de uso.
 
 ---
 
-## Créditos
-
-**Idealização e desenvolvimento:** Eliseu Fernandes Laurindo  
-**Site pessoal e profissional:** [eliseuangelos.github.io](https://eliseuangelos.github.io/)  
-**Repositório:** [github.com/eliseuangelos/day-night-experience](https://github.com/eliseuangelos/day-night-experience)
-
-Projeto desenvolvido com curiosidade, estudo contínuo e apoio de ferramentas de inteligência artificial.
+<p align="center"><em>“Quanto mais aumenta nosso conhecimento, mais evidente fica nossa ignorância.”</em><br><strong>John F. Kennedy</strong></p>

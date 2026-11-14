@@ -1,4 +1,4 @@
-/*! DAY & NIGHT EXPERIENCE v1.2.0 · estilos · Eliseu Fernandes Laurindo · https://eliseuangelos.github.io/ */
+/*! DAY & NIGHT EXPERIENCE v1.3.0 · estilos · Eliseu Fernandes Laurindo · https://eliseuangelos.github.io/ */
 .dn-btn {
   --dn-size: 48px;
   --dn-offset: 16px;
@@ -7,16 +7,14 @@
   --dn-stroke: none;
   --dn-t: .8s;
   --dn-bg: #ffffff;
-  --dn-fg: #e8890c;
-  --dn-ring: rgba(232,137,12,0.28);
-  --dn-glow: rgba(232,137,12,0.4);
+  --dn-fg: #d5dee8;
+  --dn-line: #d5dee8;
   --dn-bg-dark: #1b2a3a;
   --dn-fg-dark: #cfe0ff;
-  --dn-ring-dark: rgba(207,224,255,0.28);
-  --dn-glow-dark: rgba(207,224,255,0.4);
+  --dn-line-dark: #cfe0ff;
 }
-.dn-btn{all:unset;box-sizing:border-box;position:relative;display:inline-grid;place-items:center;width:var(--dn-size,48px);height:var(--dn-size,48px);border-radius:var(--dn-radius,50%);cursor:pointer;background:var(--dn-bg,#fff);color:var(--dn-fg,#e8890c);box-shadow:0 0 0 1px var(--dn-ring,rgba(232,137,12,.28)),0 6px 22px var(--dn-glow,rgba(232,137,12,.4));transition:transform .3s cubic-bezier(.3,1.5,.5,1),box-shadow var(--dn-t,.6s),background var(--dn-t,.6s),color var(--dn-t,.6s);-webkit-tap-highlight-color:transparent}
-.dn-btn[aria-checked=true]{background:var(--dn-bg-dark,#1b2a3a);color:var(--dn-fg-dark,#cfe0ff);box-shadow:0 0 0 1px var(--dn-ring-dark,rgba(207,224,255,.28)),0 6px 24px var(--dn-glow-dark,rgba(207,224,255,.4))}
+.dn-btn{all:unset;box-sizing:border-box;position:relative;display:inline-grid;place-items:center;width:var(--dn-size,48px);height:var(--dn-size,48px);border-radius:var(--dn-radius,50%);cursor:pointer;background:var(--dn-bg,#fff);color:var(--dn-fg,#d5dee8);border:1px solid var(--dn-line,#d5dee8);transition:transform .3s cubic-bezier(.3,1.5,.5,1),border-color var(--dn-t,.6s),background var(--dn-t,.6s),color var(--dn-t,.6s);-webkit-tap-highlight-color:transparent}
+.dn-btn[aria-checked=true]{background:var(--dn-bg-dark,#1b2a3a);color:var(--dn-fg-dark,#cfe0ff);border-color:var(--dn-line-dark,#cfe0ff)}
 .dn-btn:hover{transform:translateY(-2px) scale(1.06)}
 .dn-btn:active{transform:scale(.92)}
 .dn-btn:focus-visible{outline:3px solid var(--dn-focus,#2563eb);outline-offset:3px}

@@ -20,7 +20,7 @@ a{color:var(--color-primary)}
 a:focus-visible,.btn:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--color-primary);outline-offset:3px;border-radius:6px}
 
 /* Contêineres de página: margem lateral fluida e respeito às áreas seguras (notch) */
-.top,.wrap,.foot{width:100%;max-width:880px;margin-inline:auto;padding-left:max(var(--pad),env(safe-area-inset-left,0px));padding-right:max(var(--pad),env(safe-area-inset-right,0px))}
+.top,.wrap,.foot{width:100%;max-width:var(--page-max,880px);margin-inline:auto;padding-left:max(var(--pad),env(safe-area-inset-left,0px));padding-right:max(var(--pad),env(safe-area-inset-right,0px))}
 /* Colunas com mínimo 0: um bloco largo (código, texto sem quebra) rola dentro do seu cartão em vez de alargar a página */
 .wrap,.bwrap,.layout{grid-template-columns:minmax(0,1fr)}
 .wrap>*,.bwrap>*,.layout>*,.steps>*,.side>*,.hero>*,.card>*,.panel>*{min-width:0}
@@ -72,12 +72,30 @@ dd:last-child{margin-bottom:0}
   dd{margin:0}
 }
 
-/* Rodapé */
-.foot{padding-top:24px;padding-bottom:max(40px,env(safe-area-inset-bottom,0px));display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;justify-content:space-between;border-top:1px solid var(--color-border);color:var(--color-text-muted);font-size:.875rem}
-.foot p{flex:1 1 18rem;max-width:none}
-.foot strong{color:var(--color-text);font-weight:600}
+/* Rodapé: o mesmo nas duas páginas (empilhado no celular, duas colunas a partir de 640 px) */
+.foot{display:grid;gap:10px 24px;align-items:center;padding-top:24px;padding-bottom:max(32px,env(safe-area-inset-bottom,0px));border-top:1px solid var(--color-border);color:var(--color-text-muted);font-size:.875rem}
+.foot>*{min-width:0}
+.foot p{max-width:none}
+.foot strong,.foot [aria-current=page]{color:var(--color-text);font-weight:600}
 .foot a{color:inherit;text-decoration:none}
-.foot a:hover{color:var(--color-text)}
+.foot a:hover{color:var(--color-text);text-decoration:underline;text-underline-offset:3px}
+.foot-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px}
+.foot-nav a{display:flex;align-items:center;min-height:44px}
+@media (min-width:640px){
+  .foot{grid-template-columns:minmax(0,1fr) auto}
+  .foot-nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:2px 20px}
+  .foot-nav a{min-height:32px}
+}
+
+/* Use em seu site */
+.use{display:grid;gap:14px}
+.use details{border:1px solid var(--color-border);border-radius:10px;background:var(--color-surface)}
+.use summary{display:flex;align-items:center;min-height:44px;padding:8px 14px;font-weight:600;cursor:pointer}
+.use details[open]>summary{border-bottom:1px solid var(--color-border)}
+.use details>:not(summary){margin:12px 14px}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.links a{display:inline-flex;align-items:center;min-height:40px;padding:8px 14px;border:1px solid var(--color-border);border-radius:99px;background:var(--color-surface);color:var(--color-text);font-size:.875rem;font-weight:600;text-decoration:none}
+.links a:hover{border-color:var(--color-primary)}
 
 /* Telas pequenas */
 @media (max-width:640px){
@@ -96,7 +114,7 @@ dd:last-child{margin-bottom:0}
 }
 /* Toque: alvos de pelo menos 44 px */
 @media (pointer:coarse){
-  .btn,.cta,input[type=text]{min-height:44px}
+  .btn,.cta,input[type=text],.links a{min-height:44px}
   .row label,label.row{min-height:44px}
 }
 @media (prefers-reduced-motion:reduce){body{transition:none}}

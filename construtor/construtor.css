@@ -1,6 +1,5 @@
-:root{--accent:#68cbc2}
-.bwrap{max-width:1120px;margin:0 auto;padding:0 20px 56px;display:grid;gap:20px;counter-reset:s}
-.top{max-width:1120px}
+:root{--accent:#68cbc2;--page-max:1120px}
+.bwrap{width:100%;max-width:var(--page-max);margin:0 auto;padding:0 max(var(--pad),env(safe-area-inset-right,0px)) 56px max(var(--pad),env(safe-area-inset-left,0px));display:grid;gap:20px;counter-reset:s}
 .back{color:var(--accent);text-decoration:none;font-weight:600;font-size:.9375rem}
 .bhero{display:grid;gap:10px;padding-block:clamp(12px,3vh,32px)}
 .bhero h1{font-size:clamp(1.6rem,5vw,2.4rem)}

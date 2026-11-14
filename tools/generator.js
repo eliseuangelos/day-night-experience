@@ -6,7 +6,7 @@
   if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.DNGenerator = api;
 })(typeof self !== 'undefined' ? self : this, function () {
   'use strict';
-  var VERSION = '1.2.0', CREDIT = 'Eliseu Fernandes Laurindo · https://eliseuangelos.github.io/';
+  var VERSION = '1.3.0', CREDIT = 'Eliseu Fernandes Laurindo · https://eliseuangelos.github.io/';
   var SPEEDS = { slow: 4200, normal: 2800, fast: 1600 };
   var MODS = { core: { file: 'core.js', deps: [] }, globe: { file: 'globe.js', deps: ['core'] }, clouds: { file: 'clouds.js', deps: ['globe'] } };
   var CSSF = { base: 'core.css', stage: 'stage.css' };
@@ -14,7 +14,7 @@
   var DEF = {
     mode: 'cinematic', speed: 'normal', rotation: true, clouds: true, attribute: 'data-theme', themes: { light: 'light', dark: 'dark' },
     persistence: true, storageKey: 'dn-theme', respectSystem: true, label: 'Modo escuro',
-    button: { shape: 'circle', icons: 'solid', size: 48, position: 'top-right', offset: 16, transition: 'smooth', colors: { dayBg: '#ffffff', dayFg: '#e8890c', nightBg: '#1b2a3a', nightFg: '#cfe0ff' } }
+    button: { shape: 'circle', icons: 'solid', size: 48, position: 'top-right', offset: 16, transition: 'smooth', colors: { dayBg: '#ffffff', dayFg: '#d5dee8', dayLine: '#d5dee8', nightBg: '#1b2a3a', nightFg: '#cfe0ff', nightLine: '#cfe0ff' } }
   };
 
   function clone(o) { return JSON.parse(JSON.stringify(o)); }
@@ -22,7 +22,6 @@
   function clamp(v, a, b, d) { v = Math.round(+v); return v >= a && v <= b ? v : d; }
   function nm(v, d) { return /^[a-z][a-z0-9-]{0,23}$/i.test(v || '') ? v : d; }
   function hx(v, d) { return /^#[0-9a-f]{6}$/i.test(v || '') ? v.toLowerCase() : d; }
-  function rgba(h, a) { return 'rgba(' + parseInt(h.slice(1, 3), 16) + ',' + parseInt(h.slice(3, 5), 16) + ',' + parseInt(h.slice(5, 7), 16) + ',' + a + ')'; }
 
   // Validação: devolve a configuração normalizada (valores seguros) e avisos de conflitos.
   function validate(inp) {
@@ -36,7 +35,7 @@
       button: {
         shape: pick(b.shape, ['circle', 'rounded'], DB.shape), icons: pick(b.icons, ['solid', 'outline'], DB.icons), size: clamp(b.size, 24, 128, DB.size),
         position: pick(b.position, Object.keys(POS), DB.position), offset: clamp(b.offset, 0, 96, DB.offset), transition: pick(b.transition, ['smooth', 'fast', 'none'], DB.transition),
-        colors: { dayBg: hx(c.dayBg, DC.dayBg), dayFg: hx(c.dayFg, DC.dayFg), nightBg: hx(c.nightBg, DC.nightBg), nightFg: hx(c.nightFg, DC.nightFg) }
+        colors: { dayBg: hx(c.dayBg, DC.dayBg), dayFg: hx(c.dayFg, DC.dayFg), dayLine: hx(c.dayLine, DC.dayLine), nightBg: hx(c.nightBg, DC.nightBg), nightFg: hx(c.nightFg, DC.nightFg), nightLine: hx(c.nightLine, DC.nightLine) }
       }
     };
     if (cfg.themes.light === cfg.themes.dark) { cfg.themes = { light: 'light', dark: 'dark' }; w.push('Os nomes dos temas eram iguais; usando light e dark.'); }
@@ -69,8 +68,8 @@
     var b = c.button, k = b.colors, o = b.icons === 'outline', t = { smooth: '.8s', fast: '.3s', none: '0s' }[b.transition];
     var vars = ['.dn-btn {', '  --dn-size: ' + b.size + 'px;', '  --dn-offset: ' + b.offset + 'px;', '  --dn-radius: ' + (b.shape === 'rounded' ? '30%' : '50%') + ';',
       '  --dn-fill: ' + (o ? 'none' : 'currentColor') + ';', '  --dn-stroke: ' + (o ? 'currentColor' : 'none') + ';', '  --dn-t: ' + t + ';',
-      '  --dn-bg: ' + k.dayBg + ';', '  --dn-fg: ' + k.dayFg + ';', '  --dn-ring: ' + rgba(k.dayFg, .28) + ';', '  --dn-glow: ' + rgba(k.dayFg, .4) + ';',
-      '  --dn-bg-dark: ' + k.nightBg + ';', '  --dn-fg-dark: ' + k.nightFg + ';', '  --dn-ring-dark: ' + rgba(k.nightFg, .28) + ';', '  --dn-glow-dark: ' + rgba(k.nightFg, .4) + ';', '}', ''].join('\n');
+      '  --dn-bg: ' + k.dayBg + ';', '  --dn-fg: ' + k.dayFg + ';', '  --dn-line: ' + k.dayLine + ';',
+      '  --dn-bg-dark: ' + k.nightBg + ';', '  --dn-fg-dark: ' + k.nightFg + ';', '  --dn-line-dark: ' + k.nightLine + ';', '}', ''].join('\n');
     return '/*! DAY & NIGHT EXPERIENCE v' + VERSION + ' · estilos · ' + CREDIT + ' */\n' + vars + parts.map(function (p) { return src[CSSF[p]].replace(/\s+$/, ''); }).join('\n') + '\n';
   }
 
@@ -91,7 +90,7 @@
   // Passo a passo adaptado à versão gerada: [{ t: título, p: texto, c: código }]
   function guide(c) {
     var s = snip(c), cin = c.mode === 'cinematic', b = c.button, k = b.colors, cls = c.attribute === 'class', T = c.themes;
-    var vars = '.dn-btn {\n  --dn-size: ' + b.size + 'px;\n  --dn-bg: ' + k.dayBg + ';\n  --dn-fg: ' + k.dayFg + ';\n  --dn-bg-dark: ' + k.nightBg + ';\n  --dn-fg-dark: ' + k.nightFg + ';\n}';
+    var vars = '.dn-btn {\n  --dn-size: ' + b.size + 'px;\n  --dn-bg: ' + k.dayBg + ';\n  --dn-fg: ' + k.dayFg + ';\n  --dn-line: ' + k.dayLine + ';\n  --dn-bg-dark: ' + k.nightBg + ';\n  --dn-fg-dark: ' + k.nightFg + ';\n  --dn-line-dark: ' + k.nightLine + ';\n}';
     var fail = ['- O tema não muda: confirme que o seu CSS usa ' + (cls ? 'a classe .' + T.dark : '[data-theme="' + T.dark + '"]') + ' e que o day-night.js é carregado antes de DayNight.init().',
       '- O botão não aparece: confira o caminho do day-night.css e se nenhum elemento da página o cobre (z-index).',
       '- O tema errado aparece por um instante: inclua o script anti-flash no <head>.'];
@@ -127,7 +126,7 @@
     var b = c.button, k = b.colors, cin = c.mode === 'cinematic', r = ['Modalidade: ' + (cin ? 'experiência completa (animação da Terra)' : 'somente botões')];
     if (cin) r.push('Velocidade: ' + c.speed + ' (' + SPEEDS[c.speed] + ' ms)', 'Planeta girando: ' + (c.rotation ? 'sim' : 'não'), 'Nuvens: ' + (c.clouds ? 'sim' : 'não'));
     r.push('Botão: formato ' + b.shape + ', ícones ' + b.icons + ', ' + b.size + ' px, posição ' + b.position + (b.position === 'inline' ? '' : ' a ' + b.offset + ' px da borda') + ', transições ' + b.transition,
-      'Cores do dia: fundo ' + k.dayBg + ', ícone ' + k.dayFg, 'Cores da noite: fundo ' + k.nightBg + ', ícone ' + k.nightFg,
+      'Cores do dia: fundo ' + k.dayBg + ', ícone ' + k.dayFg + ', linha ' + k.dayLine, 'Cores da noite: fundo ' + k.nightBg + ', ícone ' + k.nightFg + ', linha ' + k.nightLine,
       'Tema aplicado por: ' + (c.attribute === 'class' ? 'classe "' + c.themes.dark + '"' : 'atributo data-theme ("' + c.themes.light + '" / "' + c.themes.dark + '")'),
       'Persistência: ' + (c.persistence ? 'localStorage, chave "' + c.storageKey + '"' : 'desativada'), 'Tema do sistema (prefers-color-scheme): ' + (c.respectSystem ? 'respeitado' : 'ignorado'));
     return r;
@@ -143,7 +142,7 @@
       '', 'ESTRUTURA', '  day-night-personalizado/', '    day-night.js', '    day-night.css', '    integracao.html', '    instrucoes.txt', '    README.md',
       '', 'REQUISITOS', '  Nenhum servidor, framework ou biblioteca. Funciona offline, abrindo o HTML no navegador.', '', 'PASSO A PASSO');
     g.forEach(function (s, i) { L.push('', (i + 1) + '. ' + s.t, pad(s.p, 3)); if (s.c) L.push('', pad(s.c, 7)); });
-    L.push('', 'PERSONALIZAÇÃO VISUAL (VARIÁVEIS CSS DO BOTÃO)', '  --dn-size, --dn-offset, --dn-radius, --dn-bg, --dn-fg, --dn-bg-dark, --dn-fg-dark, --dn-ring, --dn-glow, --dn-t', '  Exemplo: .dn-btn { --dn-size: 64px; --dn-bg: #ffffff; --dn-fg: #e8890c; }',
+    L.push('', 'PERSONALIZAÇÃO VISUAL (VARIÁVEIS CSS DO BOTÃO)', '  --dn-size, --dn-offset, --dn-radius, --dn-bg, --dn-fg, --dn-bg-dark, --dn-fg-dark, --dn-line, --dn-line-dark, --dn-t', '  Exemplo: .dn-btn { --dn-size: 64px; --dn-bg: #ffffff; --dn-fg: #e8890c; }',
       '', 'COMPATIBILIDADE', '  Versões atuais de Chrome, Edge, Firefox e Safari.' + (cin ? ' A animação usa Canvas 2D e respeita "reduzir movimento".' : ''),
       '', 'CRÉDITOS', '  Desenvolvimento: Eliseu Fernandes Laurindo', '  Site pessoal e profissional: https://eliseuangelos.github.io/', '');
     return L.join('\n');

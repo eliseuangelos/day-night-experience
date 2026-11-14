@@ -3,15 +3,15 @@
 O efeito é **um único arquivo**, `component/day-night.js`, sem dependências e sem build. Dia = tema `light`, noite = tema `dark`.
 
 ## 1. Via link
-Publique o repositório (passo 6) e aponte para os arquivos. Troque `NOME-DO-REPOSITORIO` pelo nome real do repositório.
+Não precisa baixar nada: aponte direto para os arquivos do repositório [eliseuangelos/day-night-experience](https://github.com/eliseuangelos/day-night-experience). Se publicar uma cópia sua (passo 6), troque `day-night-experience` pelo nome dela.
 
 ```html
 <!-- GitHub Pages -->
-<link rel="stylesheet" href="https://eliseuangelos.github.io/NOME-DO-REPOSITORIO/component/day-night.css">
-<script src="https://eliseuangelos.github.io/NOME-DO-REPOSITORIO/component/day-night.js"></script>
+<link rel="stylesheet" href="https://eliseuangelos.github.io/day-night-experience/component/day-night.css">
+<script src="https://eliseuangelos.github.io/day-night-experience/component/day-night.js"></script>
 <!-- jsDelivr com versão fixa (recomendado em produção) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/eliseuangelos/NOME-DO-REPOSITORIO@v1.2.0/component/day-night.css">
-<script src="https://cdn.jsdelivr.net/gh/eliseuangelos/NOME-DO-REPOSITORIO@v1.2.0/component/day-night.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/eliseuangelos/day-night-experience@v1.3.0/component/day-night.css">
+<script src="https://cdn.jsdelivr.net/gh/eliseuangelos/day-night-experience@v1.3.0/component/day-night.js"></script>
 ```
 
 ## 2. Baixando o arquivo completo
@@ -81,8 +81,8 @@ Ele lê `dn-theme` do localStorage (ou `prefers-color-scheme`) e define `data-th
 ## 6. Publicar no GitHub Pages
 1. Crie o repositório e envie todos os arquivos, com `index.html` na raiz.
 2. Settings → Pages → Deploy from a branch → `main` / `(root)`.
-3. Em alguns minutos: `https://eliseuangelos.github.io/NOME-DO-REPOSITORIO/`.
-4. Crie a tag `v1.2.0` (Releases) para usar a versão fixa no jsDelivr.
+3. Em alguns minutos: `https://eliseuangelos.github.io/day-night-experience/`.
+4. Crie a tag `v1.3.0` (Releases) para usar a versão fixa no jsDelivr.
 
 ## 7. Checklist
 - [ ] Script carregado antes do `DayNight.init`.

@@ -1,8 +1,8 @@
-/*! DAY & NIGHT EXPERIENCE v1.2.0 · modalidade: cinematic · módulos: core, globe, clouds
+/*! DAY & NIGHT EXPERIENCE v1.3.0 · modalidade: cinematic · módulos: core, globe, clouds
  * Desenvolvimento: Eliseu Fernandes Laurindo · https://eliseuangelos.github.io/ */
 (function (root) {
   'use strict';
-  var DN = { v: "1.2.0", D: {"mode":"cinematic","attribute":"data-theme","themes":{"light":"light","dark":"dark"},"persistence":true,"storageKey":"dn-theme","respectSystem":true,"animation":true,"label":"Modo escuro","button":{"size":48,"position":"top-right","offset":16},"speed":"normal","rotation":true,"clouds":true} };
+  var DN = { v: "1.3.0", D: {"mode":"cinematic","attribute":"data-theme","themes":{"light":"light","dark":"dark"},"persistence":true,"storageKey":"dn-theme","respectSystem":true,"animation":true,"label":"Modo escuro","button":{"size":48,"position":"top-right","offset":16},"speed":"normal","rotation":true,"clouds":true} };
 
   /* módulo: core */
   (function (DN, root) {

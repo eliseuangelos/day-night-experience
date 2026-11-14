@@ -93,17 +93,50 @@
     <a class="cta" href="construtor/">CRIAR MEU ALTERNADOR</a>
   </section>
 
-  <section aria-labelledby="h-use">
+  <section class="use" aria-labelledby="h-use">
     <h2 id="h-use">Use em seu site</h2>
-    <pre><code>&lt;link rel="stylesheet" href="component/day-night.css"&gt;
-&lt;script src="component/day-night.js"&gt;&lt;/script&gt;
+    <p>Importe o tema padrão direto do repositório, sem baixar nem enviar arquivos para outro repositório. Cole no HTML do seu site:</p>
+    <pre><code>&lt;!-- no &lt;head&gt;, antes do CSS do seu site (evita o "flash" de tema) --&gt;
+&lt;script src="https://eliseuangelos.github.io/day-night-experience/assets/js/theme-init.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="https://eliseuangelos.github.io/day-night-experience/component/day-night.css"&gt;
+
+&lt;!-- antes de &lt;/body&gt; --&gt;
+&lt;script src="https://eliseuangelos.github.io/day-night-experience/component/day-night.js"&gt;&lt;/script&gt;
 &lt;script&gt;DayNight.init({ position: 'top-right' });&lt;/script&gt;</code></pre>
-    <p class="note">Instruções: <code>docs/COMO-USAR.md</code>. Prefere uma versão sob medida? Use o <a href="construtor/">construtor</a>.</p>
+    <details>
+      <summary>Prefere um CDN? Use o jsDelivr</summary>
+      <pre><code>&lt;!-- no &lt;head&gt;, antes do CSS do seu site (evita o "flash" de tema) --&gt;
+&lt;script src="https://cdn.jsdelivr.net/gh/eliseuangelos/day-night-experience@main/assets/js/theme-init.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/eliseuangelos/day-night-experience@main/component/day-night.css"&gt;
+
+&lt;!-- antes de &lt;/body&gt; --&gt;
+&lt;script src="https://cdn.jsdelivr.net/gh/eliseuangelos/day-night-experience@main/component/day-night.js"&gt;&lt;/script&gt;
+&lt;script&gt;DayNight.init({ position: 'top-right' });&lt;/script&gt;</code></pre>
+      <p class="note">O <code>@main</code> entrega sempre a versão mais recente do repositório. Para travar uma versão, troque por uma tag, como <code>@v1.3.0</code> (crie a tag em Releases).</p>
+    </details>
+    <details>
+      <summary>Baixar ou clonar o repositório</summary>
+      <pre><code>git clone https://github.com/eliseuangelos/day-night-experience.git</code></pre>
+      <p class="note">Ou baixe o ZIP e copie <code>component/day-night.js</code> e <code>component/day-night.css</code> para o seu projeto.</p>
+    </details>
+    <ul class="links" aria-label="Links diretos">
+      <li><a href="https://github.com/eliseuangelos/day-night-experience" target="_blank" rel="noopener">Repositório</a></li>
+      <li><a href="https://github.com/eliseuangelos/day-night-experience/archive/refs/heads/main.zip">Baixar ZIP</a></li>
+      <li><a href="https://eliseuangelos.github.io/day-night-experience/component/day-night.css" target="_blank" rel="noopener">day-night.css</a></li>
+      <li><a href="https://eliseuangelos.github.io/day-night-experience/component/day-night.js" target="_blank" rel="noopener">day-night.js</a></li>
+      <li><a href="https://github.com/eliseuangelos/day-night-experience/blob/main/docs/COMO-USAR.md" target="_blank" rel="noopener">Manual de uso</a></li>
+    </ul>
+    <p class="note">Quer outras cores ou só o botão? Use o <a href="construtor/">construtor</a>.</p>
   </section>
 </main>
 <footer class="foot">
   <p>Desenvolvimento: <strong>Eliseu Fernandes Laurindo</strong> · Site pessoal e profissional: <a href="https://eliseuangelos.github.io/">eliseuangelos.github.io</a></p>
-  <a class="mono" href="https://eliseuangelos.github.io/">eliseu.angelos</a>
+  <nav class="foot-nav" aria-label="Links do projeto">
+    <a href="./" aria-current="page">Início</a>
+    <a href="construtor/">Construtor</a>
+    <a href="./#h-use">Use em seu site</a>
+    <a href="https://github.com/eliseuangelos/day-night-experience" target="_blank" rel="noopener">GitHub</a>
+  </nav>
 </footer>
 <script src="component/day-night.js"></script>
 <script src="assets/js/demo.js"></script>

@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.0
+- Botão sem `box-shadow`: agora tem linha de 1 px (sol `#d5dee8`, lua `#cfe0ff`) e o ícone do sol na mesma cor da linha. Variáveis novas `--dn-line` e `--dn-line-dark`; `--dn-ring*` e `--dn-glow*` foram removidas.
+- Construtor: escolha da cor da linha do dia e da noite.
+- Página inicial: "Use em seu site" com importação direta do repositório (GitHub Pages e jsDelivr) e links diretos.
+- Rodapé padronizado e responsivo na página inicial e no construtor.
+
 ## 1.2.0
 - Novo **DAY & NIGHT BUILDER** (`/construtor/`): modalidades "somente botões" e "experiência completa", prévia em tempo real com o próprio componente, downloads individuais e ZIP.
 - Componente modularizado (`component/src/`): núcleo, motor da Terra e nuvens opcionais; CSS separado do JavaScript.
